@@ -17,6 +17,10 @@ except ValueError:
 	print("Invalid numbers entered.")
 	sys.exit(1)
 
+if not math.isfinite(a) or not math.isfinite(b) or not math.isfinite(c):
+	print("Invalid numbers entered.")
+	sys.exit(1)
+
 if a == 0:
 	print("Not a quadratic equation.")
 	sys.exit(2)
