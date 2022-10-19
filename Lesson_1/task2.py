@@ -6,10 +6,11 @@
 # 0 - OK
 # 1 - Invalid numbers entered
 # 2 - Division by zero
-# 3 - Invalid first operation entered
-# 4 - Square root of a negative number calculation
+# 3 - Attempting to use a root with non-natural degree
+# 4 - Attempting to extract a root of a negative number with an even degree
+# 5 - Invalid operation entered
 
-import sys, math
+import sys
 
 try:
 	numberA = float(input("Enter number A: "))
@@ -18,37 +19,42 @@ except ValueError:
 	print("Invalid numbers entered.")
 	sys.exit(1)
 
-operation = input("Enter operation (+, − or -, × or *, ÷ or /): ")
+print(
+'''
+Valid operations:
+Addition: +
+Subtraction: - or −
+Multiplication: * or ×
+Division: / or ÷
+Root: root or √ (extracted from the first number, with the second number being its degree)
+Square: square or ² (of both numbers)''', end="\n\n"
+)
 
-# The other part of the task is not clearly defined. It asks to implement square root of a number, or its square, but it can only be done with one number. Assuming it is the result of the first operation and saving it…
-result: float
+operation = input("Enter operation: ")
 
 if operation == "+":
-	result = numberA + numberB
+	print(numberA + numberB)
 elif operation == "-" or operation == "−": # ASCII hyphen-minus or Unicode minus
-	result = numberA - numberB
+	print(numberA - numberB)
 elif operation == "*" or operation == "×": # ASCII asterisk or Unicode multiplication sign
-	result = numberA * numberB
+	print(numberA * numberB)
 elif operation == "/" or operation == "÷": # ASCII slash or Unicode division sign
 	if numberB == 0:
 		print("Division by zero.")
 		sys.exit(2)
 	else:
-		result = numberA / numberB
-else:
-	print("Invalid operation.")
-	sys.exit(3)
-
-print("Result: " + str(result))
-
-# …and asking to do sqrt or square with it.
-secondOperation = input("Do anything else with the result (√ or sqrt, ² or square, any other input will be ignored)? ")
-
-if secondOperation == "√" or secondOperation == "sqrt": # Unicode radical symbol
-	if result < 0:
-		print("Can't get a square root of a negative number.")
+		print(numberA / numberB)
+elif operation == "root" or operation == "√": # Unicode radical symbol
+	if numberB < 1 or not numberB.is_integer():
+		print("Can't extract a root with non-natural degree.")
+		sys.exit(3)
+	elif (numberB % 2) == 0 and numberA < 0:
+		print("Can't extract a root of a negative number with an even degree.")
 		sys.exit(4)
 	else:
-		print(math.sqrt(result))
-elif secondOperation == "²" or secondOperation == "square": # Unicode superscript 2
-	print(math.pow(result, 2))
+		print(numberA ** (1 / numberB))
+elif operation == "square" or operation == "²": # Unicode superscript 2
+	print("Number A square: " + str(numberA ** 2) + "\nNumber B square: " + str(numberB ** 2))
+else:
+	print("Invalid operation.")
+	sys.exit(5)
