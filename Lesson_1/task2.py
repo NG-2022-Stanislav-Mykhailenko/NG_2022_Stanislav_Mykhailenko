@@ -10,12 +10,14 @@
 # 4 - Attempting to extract a root of a negative number with an even degree
 # 5 - Invalid operation entered
 
+import sys
+
 try:
 	numberA = float(input("Enter number A: "))
 	numberB = float(input("Enter number B: "))
 except ValueError:
 	print("Invalid numbers entered.")
-	exit(1)
+	sys.exit(1)
 
 print(
 '''
@@ -39,16 +41,16 @@ elif operation == "*" or operation == "×": # ASCII asterisk or Unicode multipli
 elif operation == "/" or operation == "÷": # ASCII slash or Unicode division sign
 	if numberB == 0:
 		print("Division by zero.")
-		exit(2)
+		sys.exit(2)
 	else:
 		print(numberA / numberB)
 elif operation == "root" or operation == "√": # Unicode radical symbol
 	if numberB < 1 or not numberB.is_integer():
 		print("Can't extract a root with non-natural degree.")
-		exit(3)
+		sys.exit(3)
 	elif (numberB % 2) == 0 and numberA < 0:
 		print("Can't extract a root of a negative number with an even degree.")
-		exit(4)
+		sys.exit(4)
 	else:
 		if numberA < 0:
 			print(-abs(numberA ** (1 / numberB)))
@@ -58,4 +60,4 @@ elif operation == "square" or operation == "²": # Unicode superscript 2
 	print("Number A square: " + str(numberA ** 2) + "\nNumber B square: " + str(numberB ** 2))
 else:
 	print("Invalid operation.")
-	exit(5)
+	sys.exit(5)
