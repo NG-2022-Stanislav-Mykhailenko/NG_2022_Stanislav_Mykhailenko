@@ -6,4 +6,3 @@
 # 0 - OK
 
 print(list(dict.fromkeys(input("Enter a comma-separated list: ").split(','))))
-
