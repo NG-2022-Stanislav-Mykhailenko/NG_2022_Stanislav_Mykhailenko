@@ -6,7 +6,7 @@
 # 0 - OK
 # 1 - Invalid number entered
 
-import math, sys
+import sys
 
 def numberError():
 	print("Invalid number entered.")
@@ -17,4 +17,9 @@ except ValueError: numberError()
 
 if number < 1: numberError()
 
-print(str(number) + " factorial is " + str(math.factorial(number)))
+factorial = 1
+
+for i in range(2, number + 1):
+	factorial = factorial * i
+else:
+	print(str(number) + " factorial is " + str(factorial))
