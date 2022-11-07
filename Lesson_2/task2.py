@@ -5,4 +5,4 @@
 # Return codes:
 # 0 - OK
 
-print(list(dict.fromkeys(input("Enter a comma-separated list: ").split(','))))
+print(set(input("Enter a comma-separated list: ").split(',')))
