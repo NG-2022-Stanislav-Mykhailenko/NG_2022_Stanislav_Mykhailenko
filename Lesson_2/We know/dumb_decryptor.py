@@ -5,6 +5,7 @@
 # Return codes:
 # 0 - OK
 
-import codecs
+rot13 = str.maketrans('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz', 
+   'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm')
 
-print(codecs.encode(input("Enter message: "), "rot13"))
+print(input("Enter message: ").translate(rot13))
