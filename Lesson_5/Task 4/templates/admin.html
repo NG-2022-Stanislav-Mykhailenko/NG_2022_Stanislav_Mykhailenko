@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Editor</title>
+	</head>
+	<body>
+		<form action="/process_admin.html">
+			<label for="data">Data: </label><br>
+			<textarea name="data" rows="5" cols="50">{{contents|safe}}</textarea><br>
+			<input type="submit" value="Submit">
+		</form>
+	</body>
+</html>
