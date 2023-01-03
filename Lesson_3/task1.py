@@ -12,15 +12,15 @@
 
 import sys
 
-def add (a, b): return a + b
-def substract(a, b): return a - b
-def multiply(a, b): return a * b
-def divide(a, b):
-	if b == 0:
+def add (firstNumber, secondNumber): return firstNumber + secondNumber
+def substract(firstNumber, secondNumber): return firstNumber - secondNumber
+def multiply(firstNumber, secondNumber): return firstNumber * secondNumber
+def divide(firstNumber, secondNumber):
+	if secondNumber == 0:
 		print("Division by zero.")
 		sys.exit(2)
 	else:
-		return a / b
+		return firstNumber / secondNumber
 def square(number): return number**2
 
 def isNatural(number): return False if number < 1 or not number.is_integer() else True
@@ -41,8 +41,8 @@ def root(number, degree):
 			return number ** (1 / degree)
 
 try:
-	numberA = float(input("Enter number A: "))
-	numberB = float(input("Enter number B: "))
+	firstNumber = float(input("Enter the first number: "))
+	secondNumber = float(input("Enter the second number: "))
 except ValueError:
 	print("Invalid numbers entered.")
 	sys.exit(1)
@@ -61,17 +61,17 @@ Square: square or ² (of both numbers)''', end="\n\n"
 operation = input("Enter operation: ")
 
 if operation == "+":
-	print(add(numberA, numberB))
+	print(add(firstNumber, secondNumber))
 elif operation == "-" or operation == "−": # ASCII hyphen-minus or Unicode minus
-	print(substract(numberA, numberB))
+	print(substract(firstNumber, secondNumber))
 elif operation == "*" or operation == "×": # ASCII asterisk or Unicode multiplication sign
-	print(multiply(numberA, numberB))
+	print(multiply(firstNumber, secondNumber))
 elif operation == "/" or operation == "÷": # ASCII slash or Unicode division sign
-	print(divide(numberA, numberB))
+	print(divide(firstNumber, secondNumber))
 elif operation == "root" or operation == "√": # Unicode radical symbol
-	print(root(numberA, numberB))
+	print(root(firstNumber, secondNumber))
 elif operation == "square" or operation == "²": # Unicode superscript 2
-	print("Number A square: " + str(square(numberA)) + "\nNumber B square: " + str(square(numberB)))
+	print("Number A square: " + str(square(firstNumber)) + "\nNumber B square: " + str(square(secondNumber)))
 else:
 	print("Invalid operation.")
 	sys.exit(5)
