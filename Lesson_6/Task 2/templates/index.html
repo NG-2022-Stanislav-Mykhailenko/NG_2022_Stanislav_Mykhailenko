@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Computer info</title>
+    </head>
+    <body>
+        <form action="/send">
+			<label for="cpu">CPU: </label><br>
+			<input type="checkbox" id="cpu" name="cpu"><br>
+			<label for="ram">RAM: </label><br>
+			<input type="checkbox" id="ram" name="ram"><br>
+			<label for="architecture">Architecture: </label><br>
+			<input type="checkbox" id="architecture" name="architecture"><br>
+			<label for="family">Family: </label><br>
+			<input type="checkbox" id="family" name="family"><br>
+			<button id="submit" type="submit">Submit</button>
+        </form>
+        Collected data:
+        <hr>
+        <div id="messages">
+            {{data|safe}}
+        </div>
+    </body>
+</html>
