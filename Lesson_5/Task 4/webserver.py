@@ -1,3 +1,7 @@
+# Lesson 5 Task 4: web blog with admin
+# Author: Stanislav Mykhailenko
+# License: Unlicense
+
 from flask import Flask, render_template, redirect, request
 from flask_httpauth import HTTPBasicAuth
 from werkzeug.security import generate_password_hash, check_password_hash

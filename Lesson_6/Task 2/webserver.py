@@ -1,3 +1,7 @@
+# Lesson 6 Task 2: web server system info
+# Author: Stanislav Mykhailenko
+# License: Unlicense
+
 from databaseWorker import *
 from flask import Flask, render_template, redirect, request
 import platform, psutil, os

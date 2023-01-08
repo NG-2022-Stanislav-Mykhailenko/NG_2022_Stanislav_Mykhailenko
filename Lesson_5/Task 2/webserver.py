@@ -1,3 +1,7 @@
+# Lesson 5 Task 2: web calculator
+# Author: Stanislav Mykhailenko
+# License: Unlicense
+
 from flask import Flask, render_template, redirect, request
 from datetime import datetime
 

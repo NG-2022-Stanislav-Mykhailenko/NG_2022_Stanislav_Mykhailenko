@@ -1,3 +1,7 @@
+# Lesson 5 Task 3: web blog
+# Author: Stanislav Mykhailenko
+# License: Unlicense
+
 from flask import Flask, render_template, redirect, request
 from datetime import datetime
 

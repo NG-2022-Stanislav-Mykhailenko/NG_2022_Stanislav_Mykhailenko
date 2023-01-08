@@ -1,3 +1,7 @@
+# Lesson 6 Task 1: web chat
+# Author: Stanislav Mykhailenko
+# License: Unlicense
+
 from databaseWorker import *
 from flask import Flask, render_template, redirect, request
 

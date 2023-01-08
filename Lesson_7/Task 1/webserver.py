@@ -1,3 +1,7 @@
+# Lesson 7 Task 1: web page image download
+# Author: Stanislav Mykhailenko
+# License: Unlicense
+
 from bs4 import BeautifulSoup
 from flask import Flask, render_template, request, send_from_directory
 from zipfile import ZipFile

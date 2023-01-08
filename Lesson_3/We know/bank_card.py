@@ -1,3 +1,10 @@
+# Lesson 3 Task K3F9#@%^&?: bank card validation
+# Author: Stanislav Mykhailenko
+# License: Unlicense
+
+# Return codes:
+# 0 - OK
+
 def validateLength(number):
 	if len(number) < 13 or len(number) > 16 or len(number) == 14:
 		return False
@@ -34,4 +41,3 @@ if validateLength(number) and validateLuhn(number):
 		print("INVALID")
 else:
 	print("INVALID")
-
