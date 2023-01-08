@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Image download</title>
+    </head>
+    <body>
+        <form>
+			<label for="url">URL: </label><br>
+			<input type="url" id="url" name="url"><br>
+			<button id="submit" type="submit">Submit</button>
+        </form>
+        <div id="response">
+            {{response|safe}}
+        </div>
+    </body>
+</html>
