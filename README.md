@@ -43,3 +43,6 @@ Checked means the task is Done.
 
 ### Lesson 7
 - [ ] Task 1
+
+### Lesson 8
+- [ ] Task e1900ba2
