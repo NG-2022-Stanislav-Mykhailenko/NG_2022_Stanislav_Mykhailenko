@@ -21,13 +21,13 @@ Checked means the task is Done.
 - [ ] Task 3
 - [ ] Task 4
 - [x] Task 5
-- [ ] Task %*f#ncA0#>?
+- [x] Task %*f#ncA0#>?
 
 ### Lesson 3
-- [ ] Task 1
+- [x] Task 1
 - [ ] Task 2
-- [ ] Task 3
-- [ ] Task K3F9#@%^&?
+- [x] Task 3
+- [x] Task K3F9#@%^&?
 
 ### Lesson 4
 - [ ] Task 1
@@ -38,11 +38,11 @@ Checked means the task is Done.
 - [ ] Task 4
 
 ### Lesson 6
-- [ ] Task 1
+- [x] Task 1
 - [ ] Task 2
 
 ### Lesson 7
-- [ ] Task 1
+- [x] Task 1
 
 ### Lesson 8
 - [ ] Task e1900ba2
