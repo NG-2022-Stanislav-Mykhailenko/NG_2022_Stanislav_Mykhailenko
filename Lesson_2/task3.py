@@ -2,21 +2,24 @@
 # Author: Stanislav Mykhailenko
 # License: Unlicense
 
-error = False
+# Return codes:
+# 0 - OK
+# 1 - Invalid number entered
+
+import math, sys
+
+def numberError():
+	print("Invalid number entered.")
+	sys.exit(1)
 
 try: number = int(input("Enter a natural number: "))
-except ValueError: error = True
+except ValueError: numberError()
 
-if not error and number < 1: error = True
+if number < 1: numberError()
 
-if not error:
-	while number > 0:
-		currentNumber = number
-		while currentNumber > 0:
-			print(currentNumber, end='')
-			if currentNumber > 1: print(' ', end='')
-			currentNumber = currentNumber - 1
-		print('')
-		number = number - 1
-else:
-		print("Invalid number entered.")
+for i in range(number, 0, -1):
+	currentNumber = i
+	for j in range(currentNumber, 0, -1):
+		print(j, end='')
+		if j > 1: print(' ', end='')
+	print('')
