@@ -2,19 +2,16 @@
 # Author: Stanislav Mykhailenko
 # License: Unlicense
 
-error = False
+try:
+	number = int(input("Enter a natural number: "))
+	if number < 1:
+		raise ValueError("A natural number is required.")
 
-try: number = int(input("Enter a natural number: "))
-except ValueError: error = True
-
-if not error and number < 1: error = True
-
-if not error:
 	factorial = 1
 
 	for i in range(2, number + 1):
 		factorial = factorial * i
-	else:
-		print(str(number) + " factorial is " + str(factorial))
-else:
+
+	print(str(number) + " factorial is " + str(factorial))
+except ValueError:
 	print("Invalid number entered.")
