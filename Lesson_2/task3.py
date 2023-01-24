@@ -2,24 +2,17 @@
 # Author: Stanislav Mykhailenko
 # License: Unlicense
 
-# Return codes:
-# 0 - OK
-# 1 - Invalid number entered
+try:
+	number = int(input("Enter a natural number: "))
+	if number < 1:
+		raise ValueError("A natural number is required.")
 
-import math, sys
+	for i in range(number, 0, -1):
+		currentNumber = i
+		for j in range(currentNumber, 0, -1):
+			print(j, end='')
+			if j > 1: print(' ', end='')
+		print('')
 
-def numberError():
+except ValueError:
 	print("Invalid number entered.")
-	sys.exit(1)
-
-try: number = int(input("Enter a natural number: "))
-except ValueError: numberError()
-
-if number < 1: numberError()
-
-for i in range(number, 0, -1):
-	currentNumber = i
-	for j in range(currentNumber, 0, -1):
-		print(j, end='')
-		if j > 1: print(' ', end='')
-	print('')
