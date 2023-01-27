@@ -7,11 +7,10 @@ try:
 	if number < 1:
 		raise ValueError("A natural number is required.")
 
-	for i in range(number, 0, -1):
-		currentNumber = i
-		for j in range(currentNumber, 0, -1):
-			print(j, end='')
-			if j > 1: print(' ', end='')
+	for biggestNumber in range(number, 0, -1):
+		for currentNumber in range(biggestNumber, 0, -1):
+			print(currentNumber, end='')
+			if currentNumber > 1: print(' ', end='')
 		print('')
 
 except ValueError:
