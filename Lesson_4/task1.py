@@ -14,8 +14,8 @@ def getValue(checkedValue):
 		return "no"
 
 def printList(names, values):
-	for i in range(len(names)):
-		print(chr(ord("a") + i) + ") " + names[i] + " " + "[" + getValue(values[i]) + "]")
+	for number in range(len(names)):
+		print(chr(ord("a") + number) + ") " + names[number] + " " + "[" + getValue(values[number]) + "]")
 	print("y) Proceed")
 
 def writeData(file, name, code):
@@ -39,8 +39,8 @@ while True:
 
 file_out = open("data.txt", "w")
 
-for i in range(len(data)):
-	if data[i]:
-		writeData(file_out, names[i], code[i])
+for number in range(len(data)):
+	if data[number]:
+		writeData(file_out, names[number], code[number])
 
 file_out.close()
