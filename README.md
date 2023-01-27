@@ -25,7 +25,7 @@ Checked means the task is Done.
 
 ### Lesson 3
 - [x] Task 1
-- [ ] Task 2
+- [x] Task 2
 - [x] Task 3
 - [x] Task K3F9#@%^&?
 
@@ -35,14 +35,14 @@ Checked means the task is Done.
 ### Lesson 5
 - [x] Task 2
 - [x] Task 3
-- [ ] Task 4
+- [x] Task 4
 
 ### Lesson 6
 - [x] Task 1
-- [ ] Task 2
+- [x] Task 2
 
 ### Lesson 7
 - [x] Task 1
 
 ### Lesson 8
-- [ ] Task e1900ba2
+- [ ] Task e1900ba2 (incorrect)
