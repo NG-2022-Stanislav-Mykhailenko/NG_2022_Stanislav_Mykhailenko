@@ -9,8 +9,8 @@ try:
 
 	factorial = 1
 
-	for i in range(2, number + 1):
-		factorial = factorial * i
+	for nextNumber in range(2, number + 1):
+		factorial = factorial * nextNumber
 
 	print(str(number) + " factorial is " + str(factorial))
 except ValueError:
