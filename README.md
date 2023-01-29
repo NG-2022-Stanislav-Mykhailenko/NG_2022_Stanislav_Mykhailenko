@@ -45,4 +45,4 @@ Checked means the task is Done.
 - [x] Task 1
 
 ### Lesson 8
-- [ ] Task e1900ba2 (incorrect)
+- [ ] Task e1900ba2
