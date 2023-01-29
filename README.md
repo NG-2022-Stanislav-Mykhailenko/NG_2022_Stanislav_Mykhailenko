@@ -18,8 +18,8 @@ Checked means the task is Done.
 
 - [x] Task 1
 - [x] Task 2
-- [ ] Task 3
-- [ ] Task 4
+- [x] Task 3
+- [x] Task 4
 - [x] Task 5
 - [x] Task %*f#ncA0#>?
 
@@ -30,7 +30,7 @@ Checked means the task is Done.
 - [x] Task K3F9#@%^&?
 
 ### Lesson 4
-- [ ] Task 1
+- [x] Task 1
 
 ### Lesson 5
 - [x] Task 2
